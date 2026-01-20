@@ -1,55 +1,74 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
 import ContactCTA from "../components/ContactCTA.astro";
 import Hero from "../components/Hero.astro";
-import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout
   title="About | Razaq Himawan"
-  description="About Razaq Himawan Lorem Ipsum"
+  description="About Razaq Himawan"
 >
   <div class="stack gap-20">
     <main class="wrapper about">
       <Hero
-        title="About"
-        tagline="Thanks for stopping by. Read below to learn more about myself and my background."
-      />
+        title="About Me"
+        tagline="Versatile Full Stack Developer with hands-on experience architecting end-to-end web solutions."
+      >
+        <img
+          width="1553"
+          height="873"
+          src="/assets/portrait.jpg"
+          alt="Razaq Himawan at work"
+        />
+      </Hero>
 
       <section>
         <h2 class="section-title">Background</h2>
         <div class="content">
-          <p class="mb-3">
-            Hi! I'm a web developer who loves solving problems, picking up new
-            tools, and turning ideas into useful projects. I enjoy working on
-            both the backend and the frontend, whether it's building web apps,
-            designing APIs, or experimenting with creative projects. Right now,
-            I'm studying Informatics Management while sharpening my skills and
-            growing as a developer.
+          <p>
+            I am a Full Stack Developer based in Bandung, West Java, with a
+            passion for building scalable web applications. My journey involves
+            bridging the gap between complex backend logic and intuitive
+            frontend interfaces.
           </p>
-          <p class="mb-3">
-            Some of the technologies I've been working with recently:
+          <p>
+            Most recently, I architected an Asset Management System for <strong
+              >Politeknik Piksi Ganesha</strong
+            > using Laravel and Inertia.js, where I focused heavily on database optimization
+            and Server-Side Rendering (SSR). I also serve as a <strong
+              >Google Student Ambassador</strong
+            >, where I teach Generative AI concepts to non-technical students,
+            refining my ability to communicate complex technical topics clearly.
           </p>
-          <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>Go</li>
-            <li>JavaScript/Typescript</li>
-            <li>Next.js</li>
-            <li>Express</li>
-          </ul>
         </div>
       </section>
+
       <section>
         <h2 class="section-title">Education</h2>
         <div class="content">
-          <p><strong>Politeknik Piksi Ganesha Bandung</strong></p>
-          <p>Diploma in Informatics Management</p>
-          <p class="mb-3">2023 - Present</p>
+          <p><strong>Associate Degree in Information Management</strong></p>
           <p>
-            Studying software development, database management, data structures
-            and algorithms, and project management, with a focus on building and
-            managing information systems that solve real-world problems.
+            Politeknik Piksi Ganesha | <em>Expected Graduation: Nov 2026</em>
           </p>
+          <p>
+            Relevant Coursework: Software Engineering, DBMS, OOP, Project
+            Management.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-title">Certifications</h2>
+        <div class="content">
+          <ul>
+            <li>
+              <strong>Front-End Developer Expert</strong> - Dicoding Indonesia (2023)
+            </li>
+            <li><strong>MongoDB Fundamentals</strong> - Codepolitan (2024)</li>
+            <li>
+              <strong>Express.js Fundamentals</strong> - Codepolitan (2024)
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -57,13 +76,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <h2 class="section-title">Skills</h2>
         <div class="content">
           <p>
-            <strong>Languages:</strong> Go, JavaScript, TypeScript, SQL, HTML, CSS
+            <strong>Languages & Frameworks:</strong> Laravel, React.js, Inertia.js,
+            Golang, PHP, TypeScript.
           </p>
-          <p><strong>Frameworks:</strong> SvelteKit, Next.js, Express, React</p>
-          <p><strong>Databases:</strong> MySQL, PostgreSQL, SQLite, MongoDB</p>
           <p>
-            <strong>Other:</strong> Git & GitHub, Problem-Solving, Team Collaboration
+            <strong>Database & Cloud:</strong> MySQL, PostgreSQL, MongoDB, Docker.
           </p>
+          <p><strong>Tools:</strong> Git, Postman, Figma.</p>
         </div>
       </section>
     </main>
@@ -73,10 +92,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 </BaseLayout>
 
 <style>
-  .mb-3 {
-    margin-bottom: 0.7rem;
-  }
-
   .about {
     display: flex;
     flex-direction: column;
@@ -87,6 +102,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     margin-top: 1.5rem;
     border-radius: 1.5rem;
     box-shadow: var(--shadow-md);
+
+    width: 100%;
+    aspect-ratio: 1.5 / 1;
+    object-fit: cover;
   }
 
   section {

@@ -1,8 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-// Component Imports
 import CallToAction from "../components/CallToAction.astro";
-// Page section components
 import ContactCTA from "../components/ContactCTA.astro";
 import Grid from "../components/Grid.astro";
 import Hero from "../components/Hero.astro";
@@ -10,21 +8,16 @@ import Icon from "../components/Icon.astro";
 import Pill from "../components/Pill.astro";
 import PortfolioPreview from "../components/PortfolioPreview.astro";
 import Skills from "../components/Skills.astro";
-// Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { Image } from "astro:assets";
 
-// Content Fetching: List four most recent work projects
 const projects = (await getCollection("work"))
   .filter((project) => project.data.isFeatured)
   .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf());
 
-const books = (await getCollection("book"))
-  .filter((project) => project.data.isFeatured)
-  .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf());
-
-// Full Astro Component Syntax:
-// https://docs.astro.build/basics/astro-components/
+// const books = (await getCollection("book"))
+//   .filter((project) => project.data.isFeatured)
+//   .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf());
 ---
 
 <BaseLayout>
@@ -33,7 +26,7 @@ const books = (await getCollection("book"))
       <header class="hero">
         <Hero
           title="Hello, my name is Razaq Himawan"
-          tagline="I am a Web Developer who is currently based in Bandung, Indonesia."
+          tagline="I am a Full Stack Developer based in Bandung, Indonesia."
           align="start"
         >
           <div class="roles">
@@ -43,12 +36,12 @@ const books = (await getCollection("book"))
                 size="1.33em"
               /> Developer</Pill
             >
-            <Pill
+            <!-- <Pill
               ><Icon
                 icon="pencil-line"
                 size="1.33em"
               /> Writer</Pill
-            >
+            > -->
           </div>
         </Hero>
 
@@ -97,7 +90,7 @@ const books = (await getCollection("book"))
         </div>
       </section>
 
-      <section class="section with-background with-cta">
+      <!-- <section class="section with-background with-cta">
         <header class="section-header stack gap-2 lg:gap-4">
           <h3>Featured Writing</h3>
           <p>
@@ -127,7 +120,7 @@ const books = (await getCollection("book"))
             />
           </CallToAction>
         </div>
-      </section>
+      </section> -->
     </main>
 
     <ContactCTA />
@@ -147,9 +140,7 @@ const books = (await getCollection("book"))
   }
 
   .hero img {
-    aspect-ratio: 5 / 4;
-    object-fit: cover;
-    object-position: top;
+    aspect-ratio: 3 / 4;
     border-radius: 1.5rem;
     box-shadow: var(--shadow-md);
   }
@@ -174,8 +165,6 @@ const books = (await getCollection("book"))
       object-fit: cover;
     }
   }
-
-  /* ====================================================== */
 
   .section {
     display: grid;
@@ -255,8 +244,6 @@ const books = (await getCollection("book"))
       grid-area: cta;
     }
   }
-
-  /* ====================================================== */
 
   .mention-card {
     display: flex;

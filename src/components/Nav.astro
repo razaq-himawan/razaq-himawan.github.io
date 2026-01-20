@@ -7,7 +7,7 @@ import ThemeToggle from "./ThemeToggle.astro";
 const textLinks: { label: string; href: string }[] = [
   { label: "Home", href: "/" },
   { label: "Work", href: "/work/" },
-  { label: "Book", href: "/book/" },
+  // { label: "Book", href: "/book/" },
   { label: "About", href: "/about/" },
 ];
 
@@ -22,11 +22,11 @@ const iconLinks: {
     href: "https://www.github.com/razaq-himawan",
     icon: "github-logo",
   },
-  {
-    label: "Instagram",
-    href: "https://www.instagram.com/rou_jacksen",
-    icon: "instagram-logo",
-  },
+  // {
+  //   label: "Instagram",
+  //   href: "https://www.instagram.com/rou_jacksen",
+  //   icon: "instagram-logo",
+  // },
   {
     label: "Linkedin",
     href: "https://www.linkedin.com/in/razaq-himawan",
@@ -220,7 +220,8 @@ const isCurrentPage = (href: string) => {
 
   .menu-button[aria-expanded="true"] {
     color: var(--gray-0);
-    background: linear-gradient(180deg, var(--gray-600), transparent),
+    background:
+      linear-gradient(180deg, var(--gray-600), transparent),
       radial-gradient(var(--gray-900), var(--gray-800) 150%);
   }
 
